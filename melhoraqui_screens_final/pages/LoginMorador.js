@@ -1,4 +1,4 @@
-import styles from '../../styles/LoginMorador.module.css'
+import styles from '../styles/LoginMorador.module.css'
 import { useRouter } from 'next/router'
 
 export default function Login() {

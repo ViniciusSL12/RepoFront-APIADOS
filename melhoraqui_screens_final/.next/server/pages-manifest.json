@@ -1,0 +1,10 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/loader2": "pages/loader2.js",
+  "/LoginMorador": "pages/LoginMorador.js",
+  "/choice": "pages/choice.js",
+  "/CadastroMorador": "pages/CadastroMorador.js",
+  "/": "pages/index.js"
+}

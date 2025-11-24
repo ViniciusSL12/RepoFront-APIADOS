@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import styles from '../styles/Screen.module.css'
+import styles from '../styles/Index.module.css'
 
 export default function Loader1() {
   const router = useRouter()

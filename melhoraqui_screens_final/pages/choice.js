@@ -11,7 +11,7 @@ export default function Choice() {
 
         <button 
           className={styles.card}
-          onClick={() => router.push('/choice/LoginMorador')}
+          onClick={() => router.push('/LoginMorador')}
         >
           <img 
             src="/assets/icon-morador.png" 
@@ -22,7 +22,7 @@ export default function Choice() {
 
         <button 
           className={styles.card}
-          onClick={() => router.push('/choice/admin')}
+          onClick={() => router.push('/admin')}
         >
           <img 
             src="/assets/icon-admin.png" 

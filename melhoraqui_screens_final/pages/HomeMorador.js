@@ -6,7 +6,7 @@ export default function Morador() {
       <h1>Morador (demo)</h1>
       <p>Você escolheu Morador.</p>
 
-      <Link href="/choice">Voltar</Link>
+      <Link href="/LoginMorador">Voltar</Link>
     </div>
   )
 }

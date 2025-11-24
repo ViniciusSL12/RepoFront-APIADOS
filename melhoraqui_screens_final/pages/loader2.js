@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import styles from '../styles/Screen2.module.css'
+import styles from '../styles/Loader2.module.css'
 
 export default function Loader2() {
   const router = useRouter()
@@ -62,7 +62,7 @@ export default function Loader2() {
 
         </section>
 
-        {/* TEXTO LARANJA FINAL */}
+        
         <p className={styles.bottomText}>
           Nosso App é inteiramente pensando para pessoas portadoras de deficiência
           e oferecemos todo suporte para propocionar uma ótima experiência!

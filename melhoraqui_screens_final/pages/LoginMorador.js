@@ -25,7 +25,7 @@ export default function Login() {
 
         <button
           className={styles.loginBtn}
-          onClick={() => router.push('/choice/HomeMorador')}
+          onClick={() => router.push('/HomeMorador')}
         >
           Entrar
         </button>
@@ -33,9 +33,14 @@ export default function Login() {
 
       <div className={styles.bottomBar}>
         <button className={styles.activeTab}>Login</button>
-        <button className={styles.inactiveTab}>Cadastre-se</button>
+
+        <button
+          className={styles.inactiveTab}
+          onClick={() => router.push('/CadastroMorador')}
+        >
+          Cadastre-se
+        </button>
       </div>
     </div>
   );
 }
-

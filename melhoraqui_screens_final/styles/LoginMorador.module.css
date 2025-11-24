@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  max-width: 100%; 
+  max-width: 100%;
   margin: 0;
   padding: 0;
   background: #ffffff;
@@ -9,14 +9,17 @@
   align-items: center;
   border-radius: 0;
   overflow: hidden;
-  min-height: 100dvh; /* CORREÇÃO PARA MOBILE */
+  min-height: 100dvh;
+
+ 
+  padding-bottom: 70px;
 }
 
 .topBox {
   background: #C3600A;
   width: 100%;
-  min-height: 180px; 
-  padding: 60px 0; 
+  min-height: 180px;
+  padding: 60px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +41,7 @@
 
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* IMPORTANTE: empurra o bottomBar pro rodapé */
+  flex-grow: 1;
 }
 
 .title {
@@ -87,21 +90,24 @@
   font-weight: 600;
   cursor: pointer;
   margin: 40px auto 0 auto;
-  transition: background 0.3s ease; 
+  transition: background 0.3s ease;
 }
 
-/* CORREÇÃO DO RODAPÉ */
+
 .bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
+
   display: flex;
   justify-content: center;
+
   border-top: 1px solid #e5e5e5;
   padding-top: 10px;
-  margin-top: auto;
-
-  position: sticky; /* mantém visível */
-  bottom: 0;
   background: #fff;
+
+  z-index: 9999; 
 }
 
 .activeTab {
@@ -129,4 +135,5 @@
     max-width: 480px;
   }
 }
+
 

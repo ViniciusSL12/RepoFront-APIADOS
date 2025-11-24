@@ -171,29 +171,7 @@ A página de cadastro utiliza `localStorage` para salvar automaticamente os dado
 
 ---
 
-## 🎯 Próximos Passos
 
-- [ ] Integração com API backend
-- [ ] Sistema de autenticação JWT
-- [ ] Dashboard de vagas
-- [ ] Sistema de candidaturas
-- [ ] Notificações
-- [ ] Testes automatizados
-- [ ] Melhorias de acessibilidade WCAG 2.1 AAA
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
----
 
 ## 📝 Licença
 
@@ -201,26 +179,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-## 📧 Contato
-
-- **Email**: seu-email@exemplo.com
-- **LinkedIn**: [seu-linkedin](https://linkedin.com)
-- **GitHub**: [@seu-usuario](https://github.com/seu-usuario)
-
----
-
-## 🙏 Agradecimentos
-
-- Next.js pela excelente framework
-- React pela flexibilidade
-- Comunidade open-source
-
----
-
-<div align="center">
-
-**[⬆ voltar ao topo](#-melhor-aqui)**
-
-Feito com ❤️ para tornar o mundo mais inclusivo
-
-</div>

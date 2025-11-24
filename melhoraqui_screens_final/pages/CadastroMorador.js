@@ -58,7 +58,7 @@ export default function CadastroMorador() {
         </button>
 
         <button className={styles.activeTab}>
-          Cadastro
+          Cadastre-se
         </button>
       </div>
 

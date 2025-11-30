@@ -2,10 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/loader2": "pages/loader2.js",
-  "/choice": "pages/choice.js",
-  "/LoginMorador": "pages/LoginMorador.js",
-  "/CadastroMorador": "pages/CadastroMorador.js",
-  "/HomeMorador": "pages/HomeMorador.js"
+  "/Notificacoes": "pages/Notificacoes.js",
+  "/BuscarBairros": "pages/BuscarBairros.js",
+  "/NovaSolicitacao": "pages/NovaSolicitacao.js"
 }

@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+}
+
+.title {
+  color: #ff6600;
+  font-size: 24px;
+  flex: 1;
+  text-align: center;
+}
+
+.headerSpacer {
+  width: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navItem {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.filterSection {
+  padding: 20px;
+}
+
+.filterInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.filterTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.proposalsSection {
+  padding: 20px;
+}
+
+.proposalCard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fixa o rodapé na parte inferior */
+  bottom: 0;
+  width: 100%;
+}
+
+.footerButton {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.footerButton img {
+  width: 30px; /* Ajusta o tamanho dos ícones */
+  height: 30px;
+}
+
+.active {
+  border-bottom: 3px solid #1D0B82; /* Adiciona um traço azul para indicar a página atual */
+}

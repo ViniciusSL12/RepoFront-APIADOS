@@ -12,25 +12,15 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
+    "/Notificacoes": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/pages/Notificacoes.js"
     ],
-    "/CadastroMorador": [
+    "/NovaSolicitacao": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/CadastroMorador.js"
-    ],
-    "/HomeMorador": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/HomeMorador.js"
-    ],
-    "/LoginMorador": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/LoginMorador.js"
+      "static/chunks/pages/NovaSolicitacao.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
@@ -41,16 +31,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/choice": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/choice.js"
-    ],
-    "/loader2": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/loader2.js"
     ]
   },
   "ampFirstPages": []

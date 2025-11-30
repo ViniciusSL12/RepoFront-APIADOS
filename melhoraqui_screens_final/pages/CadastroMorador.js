@@ -1,13 +1,15 @@
 import styles from '../styles/CadastroMorador.module.css';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function CadastroMorador() {
   const router = useRouter();
 
-  // Estados com persistência no localStorage
   const [formData, setFormData] = useState({
     nome: '',
+    email: '',
+    senha: '',
+    telefone: '',
     nascimento: '',
     genero: '',
     deficiencia: '',
@@ -16,20 +18,48 @@ export default function CadastroMorador() {
     bairro: ''
   });
 
-  useEffect(() => {
-    const saved = localStorage.getItem('cadastro_morador');
-    if (saved) {
-      setFormData(JSON.parse(saved));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('cadastro_morador', JSON.stringify(formData));
-  }, [formData]);
+  const [loading, setLoading] = useState(false);
 
   const updateField = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
+
+  async function handleCadastro() {
+    if (!formData.nome || !formData.email || !formData.senha) {
+      alert("Por favor, preencha Nome, Email e Senha.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const payloadJava = {
+        ...formData,
+        tipo: 'MORADOR'
+      };
+
+      const response = await fetch('http://localhost:8080/usuarios', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payloadJava)
+      });
+
+      if (response.ok) {
+        alert("Cadastro realizado com sucesso!");
+        router.push('/LoginMorador');
+      } else {
+        const msgErro = await response.text();
+        alert("Erro no cadastro: " + msgErro);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Erro de conexão com o servidor.");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -38,13 +68,40 @@ export default function CadastroMorador() {
       </div>
 
       <div className={styles.formBox}>
-        <label className={styles.label}>Nome completo</label>
+        <label className={styles.label}>Nome completo *</label>
         <input 
           type="text" 
           placeholder="Ex: João da Silva" 
           className={styles.input} 
           value={formData.nome}
           onChange={(e) => updateField('nome', e.target.value)}
+        />
+
+        <label className={styles.label}>E-mail *</label>
+        <input 
+          type="email" 
+          placeholder="exemplo@email.com" 
+          className={styles.input} 
+          value={formData.email}
+          onChange={(e) => updateField('email', e.target.value)}
+        />
+
+        <label className={styles.label}>Senha *</label>
+        <input 
+          type="password" 
+          placeholder="Crie uma senha" 
+          className={styles.input} 
+          value={formData.senha}
+          onChange={(e) => updateField('senha', e.target.value)}
+        />
+
+        <label className={styles.label}>Telefone</label>
+        <input 
+          type="tel" 
+          placeholder="(00) 00000-0000" 
+          className={styles.input} 
+          value={formData.telefone}
+          onChange={(e) => updateField('telefone', e.target.value)}
         />
 
         <label className={styles.label}>Data de nascimento</label>
@@ -66,7 +123,6 @@ export default function CadastroMorador() {
               onChange={() => updateField('genero', 'Masculino')} 
             /> Masculino
           </label>
-
           <label>
             <input 
               type="radio" 
@@ -75,7 +131,6 @@ export default function CadastroMorador() {
               onChange={() => updateField('genero', 'Feminino')} 
             /> Feminino
           </label>
-
           <label>
             <input 
               type="radio" 
@@ -128,7 +183,13 @@ export default function CadastroMorador() {
           onChange={(e) => updateField('bairro', e.target.value)}
         />
 
-        <button className={styles.submitBtn}>Cadastrar</button>
+        <button 
+          className={styles.submitBtn}
+          onClick={handleCadastro}
+          disabled={loading}
+        >
+          {loading ? 'Cadastrando...' : 'Cadastrar'}
+        </button>
       </div>
 
       <div className={styles.bottomBar}>

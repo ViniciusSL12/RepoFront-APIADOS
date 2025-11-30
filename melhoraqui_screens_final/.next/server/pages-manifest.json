@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Notificacoes": "pages/Notificacoes.js",
-  "/BuscarBairros": "pages/BuscarBairros.js",
-  "/NovaSolicitacao": "pages/NovaSolicitacao.js"
+  "/": "pages/index.js",
+  "/loader2": "pages/loader2.js",
+  "/choice": "pages/choice.js"
 }
